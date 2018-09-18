@@ -98,6 +98,12 @@ public class Context {
 				stack.push(cos);
 			}
 			
+			if (val.equals("tan")) {
+				Expression left = stack.pop();
+				Tan tan = new Tan(left);
+				stack.push(tan);
+			}
+			
 		}
 
 		return stack.pop().evalate();
